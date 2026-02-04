@@ -1,0 +1,56 @@
+
+# This is the Pseudocode for setting up the Required Tabels : 
+
+Begin 
+
+Create Database called “Tables”
+
+IN Tables database :
+
+Create TABLE called “ Hospitals”:
+ Hospital_ID, Integer ,required , Primary key.
+ Name , Text up to 150 Characters , required.
+ Address , Text up to 150 Characters , required.
+ Size , Integer , required.
+ Type , Text up to 150 Characters , required.
+ Accreditation_Status, Text up to 150 Characters , required.
+
+      Upload Data from File: hospitals.csv into Hospitals Table 
+
+
+Create Table called “Doctors”:
+             Doctor_ID, Integer ,required , Primary key.
+ Doctor_Name , Text up to 150 Characters , required.
+ Doctor_DOB , Date , required.
+ Doctor_Address, Text up to 150 Characters , required.
+ Doctor_Role , Text up to 150 Characters , required.
+ Hospital-ID ,Integer ,required , Foreign key.
+
+     Upload Data from File doctors.csv into Doctors Table 
+
+
+Create Table called “Patients”:
+             Patient_ID, Integer ,required , Primary key.
+ Patient_Name , Text up to 150 Characters , required.
+ Patient_DOB , Date , required.
+ Patient_Address, Text up to 150 Characters , required.
+ Patient_Role , Text up to 150 Characters , required.
+ Patient_Doctor_ID, Integer ,required , Foreign key.
+        
+     Upload Data from File patients.csv into Patients Table
+
+Create Table called “Doctors And Patients” BY merging Doctors Tables & Patients Table :
+
+
+Create Forth table called “Prescriptions”
+Prescription_ID, Integer ,required , Primary key.
+Patient_ID , Integer ,required , Foreign key.
+Doctor_ID , Integer ,required , Foreign key
+Medication,Text up to 150 Characters , required.
+Prescription_Date, DATE, required.
+
+     Upload Data from File: prescribtions.csv into Prescriptions Table
+
+END
+
+
