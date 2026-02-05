@@ -1,5 +1,7 @@
 # Assessment1_KG
-This repository contains the work for Assessment 1: GitHub Coding Task and Short Report. The project includes raw data, planning documents, SQL tables, and SQL query solutions
+This repository contains the work for Assessment 1: GitHub Coding Task and Short Report.
+>
+The project includes raw data, planning documents, SQL Database, and SQL query solutions.
 
 ## Table of Contents
 - [Folder Structure](#folder-structure)
@@ -14,8 +16,8 @@ This repository contains the work for Assessment 1: GitHub Coding Task and Short
 - [References](#references)
   
 
-##  Folder Structure 
-    
+##  Folder Structure
+
     |--RREADME.md 
     |--Data.txt 
     |--Pseudocode.txt
@@ -46,7 +48,8 @@ The file Hospitals_Database.sql contains the SQL commands used to create the fol
 </ul>
 These tables are built based on the structure defined in the ERD and populated using the data provided.
 
-## SQL Queries 
+## SQL Queries
+
 This section of the project includes SQL queries used to extract information from the database. The queries perform the following tasks:
 >
 1. Display all doctors working at a specific hospital.
@@ -69,5 +72,6 @@ https://www.markdownguide.org/basic-syntax/#links
 - MySQL Conditional Logic (IF)
 https://dev.mysql.com/doc/refman/8.0/en/if.html
 - https://m365.cloud.microsoft/chat/?auth=2&origindomain=Office&from=PopupFailed
-- 
+- https://m365.cloud.microsoft/chat/?auth=2&origindomain=Office&from=PopupFailed
+  
 
