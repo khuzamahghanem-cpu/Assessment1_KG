@@ -19,14 +19,14 @@ The project includes raw data, planning documents, SQL Database, and SQL query s
 ##  Folder Structure
 
     |--RREADME.md 
-    |--Data.txt 
+    |--Data 
     |--Pseudocode.txt
     |--Hospitals_Database.sql
     |--Codes.txt
   </ul>
 
 ## Data
-The file Data.txt contains the raw data used to build the database tables for this project.
+The folder Data contains the raw data used to build the database tables for this project.
 >
 ## Planning
 >
@@ -50,7 +50,7 @@ These tables are built based on the structure defined in the ERD and populated u
 
 ## SQL Queries
 
-This section of the project includes SQL queries used to extract information from the database. The queries perform the following tasks:
+The file Codes.txt includes SQL queries used to extract information from the database. The queries perform the following tasks:
 >
 1. Display all doctors working at a specific hospital.
 >
@@ -67,7 +67,7 @@ This section of the project includes SQL queries used to extract information fro
 
 
 ## References
--Markdown Guide – Basic Syntax
+- Markdown Guide – Basic Syntax
 https://www.markdownguide.org/basic-syntax/#links
 - MySQL Conditional Logic (IF)
 https://dev.mysql.com/doc/refman/8.0/en/if.html
