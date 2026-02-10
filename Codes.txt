@@ -6,12 +6,11 @@ SELECT DISTINCT Doctors_And_Patients.Doctor_ID , Doctors_And_Patients.Doctor_Nam
 
 # 2.Print a list of all prescriptions for a particular patient , ordered by the prescriptions date :
  
-SELECT Doctors_And_Patients.Patient_ID , Doctors_And_Patients.Patient_Name  , Prescriptions.Prescription_ID , Prescriptions.Prescription_Date FROM Doctors_And_Patients LEFT JOIN Prescriptions ON Doctors_And_Patients.Patient_ID = Prescriptions.Patient_ID
-WHERE Doctors_And_Patients.Patient_ID=422 ORDER BY Prescriptions.Prescription_Date;
+SELECT Doctors_And_Patients.Patient_ID , Doctors_And_Patients.Patient_Name, Prescriptions.Prescription_ID , Prescriptions.Prescription_Date FROM Doctors_And_Patients LEFT JOIN Prescriptions ON Doctors_And_Patients.Patient_ID = Prescriptions.Patient_ID WHERE Doctors_And_Patients.Patient_ID=422 ORDER BY Prescriptions.Prescription_Date;
 
 # 3. Print a list of all prescriptions that a particular doctor has prescribed (Example : Dr.Name 'Dr. Corey Garcia'):
 
-SELECT DISTINCT Doctors_And_Patients.Doctor_ID ,Doctors_And_Patients.Doctor_Name  ,Prescriptions.Prescription_ID , Prescriptions.Prescription_Date FROM Doctors_And_Patients LEFT JOIN Prescriptions ON Doctors_And_Patients.Doctor_ID =Prescriptions.Doctor_ID WHERE Doctors_And_Patients.Doctor_Name='Dr. Corey Garcia';
+SELECT DISTINCT Doctors_And_Patients.Doctor_ID ,Doctors_And_Patients.Doctor_Name ,Prescriptions.Prescription_ID ,Prescriptions.Prescription_Date FROM Doctors_And_Patients LEFT JOIN Prescriptions ON Doctors_And_Patients.Doctor_ID =Prescriptions.Doctor_ID WHERE Doctors_And_Patients.Doctor_Name='Dr. Corey Garcia';
 
 
 # 4. Add a new patient to the database, including being registered with one of the doctors: 
@@ -26,13 +25,12 @@ VALUES
 
 # 5. Identify which doctor has made the most prescriptions: 
 
-SELECT Doctors_And_Patients.Doctor_ID , Doctors_And_Patients.Doctor_Name, COUNT(DISTINCT Prescriptions.Prescription_ID) AS  Number_of_Prescriptions FROM Doctors_And_Patients INNER JOIN Prescriptions ON Doctors_And_Patients.Doctor_ID = Prescriptions.Doctor_ID GROUP BY Doctors_And_Patients.Doctor_ID, Doctors_And_Patients.Doctor_Name ORDER BY  Number_of_Prescriptions DESC LIMIT 1;
+SELECT Doctors_And_Patients.Doctor_ID, Doctors_And_Patients.Doctor_Name, COUNT(DISTINCT Prescriptions.Prescription_ID) AS Number_of_Prescriptions FROM Doctors_And_Patients INNER JOIN Prescriptions ON Doctors_And_Patients.Doctor_ID = Prescriptions.Doctor_ID GROUP BY Doctors_And_Patients.Doctor_ID, Doctors_And_Patients.Doctor_Name ORDER BY Number_of_Prescriptions DESC LIMIT 1;
 
 # 6. Print a list of all doctors at the hospital with biggest size (number of beds): 
 
 
-SELECT DISTINCT  Doctors_And_Patients.Doctor_Name , Hospitals.Name FROM Doctors_And_Patients INNER JOIN Hospitals ON Doctors_And_Patients.Hospital_ID = Hospitals.Hospital_ID WHERE Hospitals.Size
-= (SELECT MAX(Size) FROM Hospitals);
+SELECT DISTINCT Doctors_And_Patients.Doctor_Name, Hospitals.Name FROM Doctors_And_Patients INNER JOIN Hospitals ON Doctors_And_Patients.Hospital_ID = Hospitals.Hospital_ID WHERE Hospitals.Size = (SELECT MAX(Size) FROM Hospitals);
 
 
 
